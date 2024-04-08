@@ -1,3 +1,6 @@
+#run app
+python app.py
+
 # building docker image
 docker build -t myhelloapp .
 
