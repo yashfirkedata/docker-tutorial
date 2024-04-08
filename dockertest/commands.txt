@@ -2,13 +2,13 @@
 python app.py
 
 # building docker image
-docker build -t myhelloapp .
+docker build -t <image-name> .
 
 # looking for image
 docker images
 
 # running image
-docker run -d -p 5000:8000 myhelloapp
+docker run -d -p 5000:8000 <image-name>
 #5000:8000 represents port mapping
 # -d represents detached mode
 
@@ -20,3 +20,18 @@ docker ps
 
 # to stop, get container-id from docker ps 
 docker stop <container-id>
+
+# Login
+docker login
+
+# tagging
+docker tag <image-name> <username>/<repository-name>
+
+# pushing 
+docker push <username>/<repository-name>
+
+# now you can see your docker image in dockerhub repositories
+
+# you can use in your machine 
+docker pull <username>/<repository-name>
+
