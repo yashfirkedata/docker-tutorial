@@ -15,8 +15,11 @@ docker run -d -p 5000:8000 <image-name>
 #goto browser and type
 localhost:8000
 
-# get info 
+# get info of running container
 docker ps
+
+#get all containers
+docker ps -a
 
 # to stop, get container-id from docker ps 
 docker stop <container-id>
@@ -35,3 +38,18 @@ docker push <username>/<repository-name>
 # you can use in your machine 
 docker pull <username>/<repository-name>
 
+# running redis in out pc in interactive mode (-i)
+docker pull redis
+docker images
+docker run -i -t redis /bin/sh 
+#command to open redis terminal 
+
+# exit from container 
+exit 
+
+# open ubuntu with bash terminal
+docker run -it ubuntu /bin/bash
+
+# open jenkins in interactive mode on browser
+docker run -p 8080:8080 jenkins/jenkins:lts
+localhost:8080
