@@ -1,0 +1,7 @@
+docker build -t newimage .
+docker images
+docker run -i -t --name newcontainer newimage /bin/bash
+ls #you will find testfile and test.tar.gz
+
+echo $myname 
+#using cat command u can check contents.
