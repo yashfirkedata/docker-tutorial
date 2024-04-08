@@ -7,6 +7,7 @@ docker images
 # running image
 docker run -d -p 5000:8000 myhelloapp
 #5000:8000 represents port mapping
+# -d represents detached mode
 
 #goto browser and type
 localhost:8000
