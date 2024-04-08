@@ -53,3 +53,17 @@ docker run -it ubuntu /bin/bash
 # open jenkins in interactive mode on browser
 docker run -p 8080:8080 jenkins/jenkins:lts
 localhost:8080
+
+#open ubuntu container
+docker run --name <container-name> -it ubuntu /bin/bash
+touch test.py
+cd tmp
+touch myfile.txt
+exit
+
+# above we created new files so we can get the differences as
+docker diff <container-name>
+
+# how to create image from above container
+docker commit <container-name> <image-name> 
+# now u can push to docker hub and use it 
